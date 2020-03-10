@@ -1,0 +1,18 @@
+query getPatients{
+  Patients{
+    ID
+    FirstName
+    LastName
+    Height
+    Weight
+    DOB
+    SSN
+    Notes
+    IsActive
+    ActivatedAt
+    DeactivatedAt
+    Location{
+      City
+    }
+  }
+}

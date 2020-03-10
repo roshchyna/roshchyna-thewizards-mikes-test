@@ -1,0 +1,19 @@
+overwrite: true
+schema: "https://api.dev.dmecloud.io/graphql"
+documents: "src/graphql/**/*.graphql"
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withHooks:  true
+      scalars:
+        DateTime: Date
+      withComponent:  false
+      withHOC: false
+      withMutationFn: false
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

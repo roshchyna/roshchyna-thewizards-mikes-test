@@ -1,0 +1,23 @@
+mutation savePatient($input: SavePatient!) {
+  SavePatient(input: $input) {
+    ID
+    SSN
+  }
+}
+
+query patientFormDependenciesLocations {
+  Locations {
+    ID
+    Name
+    City
+    State
+  }
+}
+
+query patientFormDependenciesContractors($locationId: Int) {
+  Contractors(LocationID: $locationId) {
+    ID
+    Name
+    City
+  }
+}

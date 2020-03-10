@@ -1,0 +1,10 @@
+query patientsFilterBy($input: String!) {
+  Patients(FilterBy: SSN, Filter: $input){
+    ID
+		SSN
+    FirstName
+    LastName
+    Height
+    Weight
+  }
+}
